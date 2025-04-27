@@ -19,6 +19,7 @@ group = mod_group_id
 
 repositories {
     mavenLocal()
+    maven { url "https://maven.conczin.net/Artifacts" }
 }
 
 base {
@@ -112,7 +113,15 @@ configurations {
     runtimeClasspath.extendsFrom localRuntime
 }
 
-dependencies {
+jarJar.enable()
+
+tasks.named('jarJar') {dependencies {
+    jarJar(group: 'immersive_aircraft', name: 'immersive_aircraft', version: '[1.1.3,1.2.2)')
+}}
+
+
+
+
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
@@ -134,7 +143,6 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-}
 
 // This block of code expands all declared replace properties in the specified resource targets.
 // A missing property will result in an error. Properties are expanded using ${} Groovy notation.
