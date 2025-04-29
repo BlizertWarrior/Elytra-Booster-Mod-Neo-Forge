@@ -15,7 +15,8 @@ public class ModItems {
     public static final DeferredItem<Item> ELYTRABOOSTERMK1 = ITEMS.register("elytraboostermk1",
             () -> new Item(new Item.Properties()
                     .stacksTo(1)
-                    .rarity(Rarity.EPIC)));
+                    .rarity(Rarity.EPIC)))
+            .Jsonconfig;
 
     public static void register(IEventBus eventBus) {
 

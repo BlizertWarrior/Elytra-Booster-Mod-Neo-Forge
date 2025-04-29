@@ -1,11 +1,20 @@
 package net.blizertwarrior.elytraboostermod;
 
+import com.mojang.logging.LogUtils;
+import immersive_aircraft.Items;
+import immersive_aircraft.cobalt.registration.Registration;
+import immersive_aircraft.Main;
+import immersive_aircraft.item.upgrade.VehicleStat;
+import immersive_aircraft.item.upgrade.VehicleUpgrade;
+import immersive_aircraft.item.upgrade.VehicleUpgradeRegistry;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
 import net.blizertwarrior.elytraboostermod.item.ModCreativeModTabs;
 import net.blizertwarrior.elytraboostermod.item.ModItems;
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.world.item.Item;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -17,11 +26,20 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.slf4j.Logger;
+
+
+import java.util.function.Supplier;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(ElytraBoosterMod.MODID)
 public class ElytraBoosterMod
 {
+    public static Supplier<Item> ELYTRABOOSTERMK1;
+
+    public static init() {
+        ELYTRABOOSTERMK1 = register("elytraboostermk1");
+    }
     // Define mod id in a common place for everything to reference
     public static final String MODID = "elytraboostermod";
     // Directly reference a slf4j logger
