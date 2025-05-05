@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "elytraboostermod:elytraboostermk1recipe",
+  "category": "misc",
+  "pattern": [
+    "ABA",
+    "CDC",
+    "ABA"
+  ],
+  "key": {
+    "A": {
+      "item": "immersive_aircraft:steel_boiler"
+    },
+    "B": {
+      "item": "immersive_aircraft:engine"
+    },
+    "C": {
+      "item": "immersive_aircraft:sturdy_pipes"
+    },
+    "D": {
+      "item": "minecraft:elytra"
+    }
+  },
+  "result": {
+    "id": "elytraboostermod:elytraboostermk1",
+    "count": 1
+  }
+}
