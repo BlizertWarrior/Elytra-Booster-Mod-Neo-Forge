@@ -11,7 +11,7 @@ issueTrackerURL="https://github.com/BlizertWarrior/Elytra-Booster-Mod-Neo-Forge/
 modId="elytraboostermod"
 version="[1.21.1]"
 displayName="Elytra Booster Mod"
-logoFile="ElytraBoosterModLogo.png"
+logoFile="elytraboostermodlogo.png"
 authors="BlizertWarrior"
 description="Adds a vehicle upgrade for Immersive Aircrafts that (should) buff the planes to be a good contender to the elytra!"
 
