@@ -9,7 +9,7 @@ issueTrackerURL="https://github.com/BlizertWarrior/Elytra-Booster-Mod-Neo-Forge/
 [[mods]]
 
 modId="elytraboostermod"
-version="[1.21.1]"
+version="0.5.0"
 displayName="Elytra Booster Mod"
 logoFile="elytraboostermodlogo.png"
 authors="BlizertWarrior"
